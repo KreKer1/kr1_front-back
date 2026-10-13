@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаунчер — LightWorld</title>
+    <meta name="description" content="Лаунчер LightWorld: скачивание, системные требования и контакты сервера — Discord, Telegram, YouTube и почта поддержки.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="index.html">Главная</a>
+          <a class="nav__link" href="news.html">Новости</a>
+          <a class="nav__link" href="donate.html">Донат</a>
+          <a class="nav__link nav__link--active" href="launcher.html" aria-current="page">Лаунчер</a>
+        </nav>
+        <a class="brand" href="index.html" aria-label="LightWorld, на главную">
+          <img class="brand__logo" src="images/logo.png" alt="" width="64" height="64">
+          <span class="brand__name">LIGHT<span class="brand__accent">WORLD</span></span>
+        </a>
+        <div class="header__actions">
+          <a class="button button--accent" href="launcher.html">Начать играть</a>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__inner">
+        <div class="page__head">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item" aria-current="page">Лаунчер</li>
+            </ol>
+          </nav>
+          <h1 class="page__title">Лаунчер</h1>
+          <p class="page__lead">Скачай лаунчер, укажи ник и нажми «Играть». Нужную версию игры он поставит сам.</p>
+        </div>
+        <section class="download" aria-label="Скачать лаунчер">
+          <img class="download__logo" src="images/logo.png" alt="Логотип LightWorld" width="128" height="128">
+          <div class="download__body">
+            <h2 class="download__title">Лаунчер LightWorld</h2>
+            <p class="download__text">Java уже встроена, ставить ничего отдельно не нужно. Обновления скачиваются автоматически.</p>
+            <ul class="download__tags">
+              <li class="download__tag">v0.1 beta</li>
+              <li class="download__tag">≈ 48 МБ</li>
+              <li class="download__tag">Windows 10/11</li>
+            </ul>
+            <div class="download__row">
+              <button class="button button--accent button--large" type="button" disabled>Скачать для Windows</button>
+              <span class="download__note">Ссылка появится после открытия беты для всех</span>
+            </div>
+          </div>
+        </section>
+        <section class="page__section" id="start">
+          <h2 class="page__subtitle">Три шага до сервера</h2>
+          <ol class="steps">
+            <li class="step">
+              <img class="step__icon" src="images/icons/chest-minecart.png" alt="" width="48" height="48">
+              <h3 class="step__title">Скачай</h3>
+              <p class="step__text">Запусти установщик и следуй подсказкам.</p>
+            </li>
+            <li class="step">
+              <img class="step__icon" src="images/icons/name-tag.png" alt="" width="48" height="48">
+              <h3 class="step__title">Укажи ник</h3>
+              <p class="step__text">От 3 до 16 символов: латиница, цифры и подчёркивание.</p>
+            </li>
+            <li class="step">
+              <img class="step__icon" src="images/icons/ender-pearl.png" alt="" width="48" height="48">
+              <h3 class="step__title">Играй</h3>
+              <p class="step__text">Нажми «Играть», и лаунчер сразу подключит к серверу.</p>
+            </li>
+          </ol>
+        </section>
+        <section class="page__section" id="requirements">
+          <h2 class="page__subtitle">Системные требования</h2>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Параметр</th>
+                  <th scope="col">Минимум</th>
+                  <th scope="col">Рекомендуется</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Оперативная память</td>
+                  <td>4 ГБ</td>
+                  <td>8 ГБ</td>
+                </tr>
+                <tr>
+                  <td>Видеокарта</td>
+                  <td>С поддержкой OpenGL 4.4</td>
+                  <td>GTX 1050 и выше</td>
+                </tr>
+                <tr>
+                  <td>Место на диске</td>
+                  <td>2 ГБ</td>
+                  <td>4 ГБ</td>
+                </tr>
+                <tr>
+                  <td>Интернет</td>
+                  <td>5 Мбит/с</td>
+                  <td>20 Мбит/с</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="page__section" id="contacts">
+          <h2 class="page__subtitle">Мы в сети</h2>
+          <p class="page__text">Анонсы обновлений, трейлеры и поддержка игроков. Вопросы по покупкам — на почту <a class="page__link" href="mailto:support@lightworld.su">support@lightworld.su</a>.</p>
+          <div class="socials">
+            <a class="social" href="#">
+              <i class="fa-brands fa-discord social__icon" aria-hidden="true"></i>
+              Discord
+            </a>
+            <a class="social" href="#">
+              <i class="fa-brands fa-telegram social__icon" aria-hidden="true"></i>
+              Telegram
+            </a>
+            <a class="social" href="https://www.youtube.com/@Krainter00" target="_blank" rel="noopener">
+              <i class="fa-brands fa-youtube social__icon" aria-hidden="true"></i>
+              YouTube
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2026 LightWorld.</p>
+        <p class="footer__author">Соколов Г. А., ЭФБО-12-25</p>
+      </div>
+    </footer>
+    <a class="cart-button" href="cart.html" aria-label="Корзина">
+      <i class="fa-solid fa-cart-shopping cart-button__icon" aria-hidden="true"></i>
+      <span class="cart-button__count" id="cart-count" hidden>0</span>
+    </a>
+  </body>
+</html>

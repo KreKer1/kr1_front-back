@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Набор «Новичок» — LightWorld</title>
+    <meta name="description" content="Набор «Новичок» на сервере LightWorld: железные инструменты, еда и кровать для первого дня. Цена 640 руб.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="index.html">Главная</a>
+          <a class="nav__link" href="news.html">Новости</a>
+          <a class="nav__link nav__link--active" href="donate.html">Донат</a>
+          <a class="nav__link" href="launcher.html">Лаунчер</a>
+        </nav>
+        <a class="brand" href="index.html" aria-label="LightWorld, на главную">
+          <img class="brand__logo" src="images/logo.png" alt="" width="64" height="64">
+          <span class="brand__name">LIGHT<span class="brand__accent">WORLD</span></span>
+        </a>
+        <div class="header__actions">
+          <a class="button button--accent" href="launcher.html">Начать играть</a>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__inner">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="donate.html">Донат</a></li>
+            <li class="breadcrumbs__item" aria-current="page">Набор «Новичок»</li>
+          </ol>
+        </nav>
+        <article class="product page__section">
+          <div class="product__art">
+            <span class="product__badge">-53%</span>
+            <img class="product__icon" src="images/icons/bundle.png" alt="Набор «Новичок»" width="160" height="160">
+          </div>
+          <div class="product__info">
+            <h1 class="page__title product__title">Набор «Новичок»</h1>
+            <p class="page__lead">Всё, что нужно, чтобы спокойно пережить первую ночь: инструменты, еда и кровать. Те же предметы можно добыть в игре за пару часов, набор просто экономит время.</p>
+            <p class="product__price">640 руб. <s class="product__old">1360 руб.</s></p>
+            <div class="product__actions">
+              <button class="button button--accent button--large" type="button" data-cart-id="kit-novice" data-cart-name="Набор «Новичок»" data-cart-price="640">В корзину</button>
+              <a class="button button--ghost button--large" href="donate.html">Вернуться в лавку</a>
+            </div>
+            <h2 class="product__subtitle">Что внутри</h2>
+            <ul class="product__list">
+              <li>Железные кирка, топор и лопата</li>
+              <li>16 жареных стейков</li>
+              <li>Кровать и 32 факела</li>
+              <li>64 блока дубовых досок</li>
+            </ul>
+            <h2 class="product__subtitle">Условия</h2>
+            <ul class="product__list">
+              <li>Выдаётся один раз на аккаунт</li>
+              <li>Действует в режиме «Выживание»</li>
+              <li>Предметы приходят в сундук на спавне после входа в игру</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2026 LightWorld.</p>
+        <p class="footer__author">Соколов Г. А., ЭФБО-12-25</p>
+      </div>
+    </footer>
+    <a class="cart-button" href="cart.html" aria-label="Корзина">
+      <i class="fa-solid fa-cart-shopping cart-button__icon" aria-hidden="true"></i>
+      <span class="cart-button__count" id="cart-count" hidden>0</span>
+    </a>
+  </body>
+</html>

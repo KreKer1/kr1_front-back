@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — LightWorld</title>
+    <meta name="description" content="Корзина лавки LightWorld: проверь выбранные товары и оформи заказ.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="index.html">Главная</a>
+          <a class="nav__link" href="news.html">Новости</a>
+          <a class="nav__link" href="donate.html">Донат</a>
+          <a class="nav__link" href="launcher.html">Лаунчер</a>
+        </nav>
+        <a class="brand" href="index.html" aria-label="LightWorld, на главную">
+          <img class="brand__logo" src="images/logo.png" alt="" width="64" height="64">
+          <span class="brand__name">LIGHT<span class="brand__accent">WORLD</span></span>
+        </a>
+        <div class="header__actions">
+          <a class="button button--accent" href="launcher.html">Начать играть</a>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__inner">
+        <div class="page__head">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="donate.html">Донат</a></li>
+              <li class="breadcrumbs__item" aria-current="page">Корзина</li>
+            </ol>
+          </nav>
+          <h1 class="page__title">Корзина</h1>
+          <p class="page__lead">Проверь товары и заполни форму. Все поля, кроме комментария, обязательные.</p>
+        </div>
+        <section class="cart" aria-label="Товары в корзине">
+          <p class="cart__empty" id="cart-empty">Корзина пуста. <a class="cart__empty-link" href="donate.html">Перейти в лавку</a></p>
+          <ul class="cart__list" id="cart-list"></ul>
+          <p class="cart__total" id="cart-total-row">Итого: <span id="cart-total">0</span> руб.</p>
+        </section>
+        <section class="order page__section" id="cart-order" aria-label="Оформление заказа">
+          <h2 class="page__subtitle">Оформление</h2>
+          <form class="form" id="order-form" action="#" method="post" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="order-name">Имя</label>
+              <input class="form__input" id="order-name" name="name" type="text" required minlength="2" placeholder="Например, Алексей">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="order-nick">Ник в игре</label>
+              <input class="form__input" id="order-nick" name="nick" type="text" required pattern="[A-Za-z0-9_]{3,16}" placeholder="Steve_2026">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="order-email">E-mail</label>
+              <input class="form__input" id="order-email" name="email" type="email" required placeholder="steve@mail.ru">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="order-phone">Телефон</label>
+              <input class="form__input" id="order-phone" name="phone" type="tel" required pattern="\+7[0-9]{10}" placeholder="+79001234567">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="order-date">Дата активации</label>
+              <input class="form__input" id="order-date" name="date" type="date" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="order-mode">Режим</label>
+              <select class="form__input" id="order-mode" name="mode" required>
+                <option value="">Выбери режим</option>
+                <option value="survival">Выживание</option>
+                <option value="anarchy">Анархия</option>
+                <option value="minigames">Мини-игры</option>
+              </select>
+            </div>
+            <div class="form__field form__field--wide">
+              <label class="form__label" for="order-comment">Комментарий</label>
+              <textarea class="form__input" id="order-comment" name="comment" rows="3" placeholder="Например, подарок другу Alex_99"></textarea>
+            </div>
+            <label class="form__check" for="order-agree">
+              <input id="order-agree" name="agree" type="checkbox" required>
+              <span>Согласен на обработку персональных данных и с правилами сервера</span>
+            </label>
+            <p class="form__error" id="order-error" aria-live="polite"></p>
+            <div class="form__actions">
+              <button class="button button--accent" type="submit" id="order-submit" disabled>Отправить заявку</button>
+              <a class="button button--ghost" href="donate.html">Продолжить покупки</a>
+            </div>
+          </form>
+          <p class="form-success" id="order-success" hidden>Заявка отправлена! Мы пришлём подтверждение на почту.</p>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2026 LightWorld.</p>
+        <p class="footer__author">Соколов Г. А., ЭФБО-12-25</p>
+      </div>
+    </footer>
+    <a class="cart-button" href="cart.html" aria-label="Корзина">
+      <i class="fa-solid fa-cart-shopping cart-button__icon" aria-hidden="true"></i>
+      <span class="cart-button__count" id="cart-count" hidden>0</span>
+    </a>
+  </body>
+</html>
