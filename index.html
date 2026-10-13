@@ -1,79 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Учебный интернет-магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#popular">Популярные товары</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
-    </section>
-
-    <section class="section" id="advantages">
-      <h2>Преимущества проекта</h2>
-      <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="popular">
-      <h2>Популярные товары</h2>
-      <article class="product-card">
-        <h3>Товар 1</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1000 руб.</p>
-      </article>
-      <article class="product-card">
-        <h3>Товар 2</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1500 руб.</p>
-      </article>
-      <article class="product-card">
-        <h3>Товар 3</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 2000 руб.</p>
-      </article>
-    </section>
-
-    <aside class="aside-info">
-      <h2>Информация для студентов</h2>
-      <p>
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
-      </p>
-    </aside>
-  </main>
-
-  <footer id="contacts">
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightWorld — сервер Minecraft</title>
+    <meta name="description" content="LightWorld — сервер Minecraft Java с ванильным выживанием, экономикой игроков и честным донатом.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav__link nav__link--active" href="index.html" aria-current="page">Главная</a>
+          <a class="nav__link" href="#news">Новости</a>
+          <a class="nav__link" href="#shop">Донат</a>
+          <a class="nav__link" href="#start">Лаунчер</a>
+        </nav>
+        <a class="brand" href="index.html" aria-label="LightWorld, на главную">
+          <img class="brand__logo" src="images/logo.png" alt="" width="64" height="64">
+          <span class="brand__name">LIGHT<span class="brand__accent">WORLD</span></span>
+        </a>
+        <div class="header__actions">
+          <a class="button button--accent" href="#start">Начать играть</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="stage" id="news">
+        <div class="stage__inner">
+          <div class="news-strip" role="region" aria-label="Последние новости">
+            <article class="news-card">
+              <img class="news-card__icon" src="images/icons/experience-bottle.png" alt="" width="32" height="32">
+              <div class="news-card__body">
+                <p class="news-card__meta"><time datetime="2026-10-10">10.10</time> · Обновление</p>
+                <p class="news-card__title">Открыт бета-тест выживания</p>
+                <a class="news-card__more" href="news.html#beta">Читать далее</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img class="news-card__icon" src="images/icons/firework-rocket.png" alt="" width="32" height="32">
+              <div class="news-card__body">
+                <p class="news-card__meta"><time datetime="2026-10-07">07.10</time> · Ивент</p>
+                <p class="news-card__title">Конкурс построек «Осень»</p>
+                <a class="news-card__more" href="news.html#build">Читать далее</a>
+              </div>
+            </article>
+            <article class="news-card">
+              <img class="news-card__icon" src="images/icons/writable-book.png" alt="" width="32" height="32">
+              <div class="news-card__body">
+                <p class="news-card__meta"><time datetime="2026-10-02">02.10</time> · Правила</p>
+                <p class="news-card__title">Обновили правила сервера</p>
+                <a class="news-card__more" href="news.html#rules">Читать далее</a>
+              </div>
+            </article>
+          </div>
+          <div class="hero">
+            <p class="hero__status">
+              <img class="hero__ping" src="images/icons/ping.png" alt="" width="20" height="16">
+              <span class="hero__online">Онлайн:</span> 128 игроков · бета-тест
+            </p>
+            <h1 class="hero__title">
+              <img class="hero__logo" src="images/title.png" alt="LightWorld" width="2048" height="320">
+            </h1>
+            <p class="hero__lead">Ванильное выживание с экономикой игроков, еженедельными ивентами и честным донатом. Сервер открыт для бета-теста, заходи одним из первых.</p>
+            <div class="hero__actions">
+              <a class="button button--accent button--large" href="#start">Начать играть</a>
+              <button class="ip-copy" type="button" id="ip-copy">play.lightworld.su <span class="ip-copy__hint">Копировать</span></button>
+            </div>
+            <ul class="hero__facts">
+              <li class="hero__fact"><img src="images/icons/grass-block.png" alt="" width="16" height="16">Java 26.2</li>
+              <li class="hero__fact"><img src="images/icons/ender-eye.png" alt="" width="16" height="16">Свой лаунчер</li>
+              <li class="hero__fact"><img src="images/icons/emerald.png" alt="" width="16" height="16">Играть бесплатно</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="shop">
+        <div class="section__inner">
+          <div class="section__head">
+            <p class="section__eyebrow">Лавка</p>
+            <h2 class="section__title">Популярное в лавке</h2>
+            <p class="section__text">Только косметика и удобства. Покупки поддерживают сервер и не дают преимущества в игре.</p>
+          </div>
+          <div class="products">
+            <article class="product-card">
+              <div class="product-card__art">
+                <span class="product-card__badge">Хит</span>
+                <img class="product-card__icon" src="images/icons/trial-key.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Проходка «Навсегда»</h3>
+              <p class="product-card__text">Доступ ко всем режимам без срока действия.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">399 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-product="Проходка «Навсегда»">Заказать</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__art">
+                <span class="product-card__badge">-53%</span>
+                <img class="product-card__icon" src="images/icons/bundle.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Набор «Новичок»</h3>
+              <p class="product-card__text">Инструменты, еда и кровать для первого дня.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">640 руб. <s class="product-card__old">1360</s></p>
+                <button class="button button--accent product-card__button" type="button" data-product="Набор «Новичок»">Заказать</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/elytra.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Плащ «Закат»</h3>
+              <p class="product-card__text">Плащ с тёплым градиентом и золотой каймой.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">299 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-product="Плащ «Закат»">Заказать</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2026 LightWorld.</p>
+        <p class="footer__author">Соколов Г. А., ЭФБО-12-25</p>
+      </div>
+    </footer>
+    <dialog class="modal" id="order-modal" aria-labelledby="order-title">
+      <div class="modal__body">
+        <div class="modal__head">
+          <h2 class="modal__title" id="order-title">Заявка на покупку</h2>
+          <button class="modal__close" type="button" id="order-close" aria-label="Закрыть окно">×</button>
+        </div>
+        <p class="modal__product">Товар: <span id="order-product-name">не выбран</span></p>
+        <form class="form" id="order-form" action="#" method="post" novalidate>
+          <input type="hidden" id="order-product" name="product">
+          <div class="form__field">
+            <label class="form__label" for="order-name">Имя</label>
+            <input class="form__input" id="order-name" name="name" type="text" required minlength="2" placeholder="Например, Алексей">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="order-nick">Ник в игре</label>
+            <input class="form__input" id="order-nick" name="nick" type="text" required pattern="[A-Za-z0-9_]{3,16}" placeholder="Steve_2026">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="order-email">E-mail</label>
+            <input class="form__input" id="order-email" name="email" type="email" required placeholder="steve@mail.ru">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="order-phone">Телефон</label>
+            <input class="form__input" id="order-phone" name="phone" type="tel" required pattern="\+7[0-9]{10}" placeholder="+79001234567">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="order-date">Дата активации</label>
+            <input class="form__input" id="order-date" name="date" type="date" required>
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="order-mode">Режим</label>
+            <select class="form__input" id="order-mode" name="mode" required>
+              <option value="">Выбери режим</option>
+              <option value="survival">Выживание</option>
+              <option value="anarchy">Анархия</option>
+              <option value="minigames">Мини-игры</option>
+            </select>
+          </div>
+          <div class="form__field form__field--wide">
+            <label class="form__label" for="order-comment">Комментарий</label>
+            <textarea class="form__input" id="order-comment" name="comment" rows="3" placeholder="Например, подарок другу Alex_99"></textarea>
+          </div>
+          <label class="form__check" for="order-agree">
+            <input id="order-agree" name="agree" type="checkbox" required>
+            <span>Согласен на обработку персональных данных и с правилами сервера</span>
+          </label>
+          <p class="form__error" id="order-error" aria-live="polite"></p>
+          <div class="form__actions">
+            <button class="button button--accent" type="submit">Отправить заявку</button>
+            <button class="button button--ghost" type="button" id="order-cancel">Отмена</button>
+          </div>
+        </form>
+        <p class="modal__success" id="order-success" hidden>Форма успешно отправлена!</p>
+      </div>
+    </dialog>
+  </body>
 </html>
