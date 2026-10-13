@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
@@ -17,16 +18,16 @@
       <div class="header__inner">
         <nav class="nav" aria-label="Основная навигация">
           <a class="nav__link nav__link--active" href="index.html" aria-current="page">Главная</a>
-          <a class="nav__link" href="#news">Новости</a>
-          <a class="nav__link" href="#shop">Донат</a>
-          <a class="nav__link" href="#start">Лаунчер</a>
+          <a class="nav__link" href="news.html">Новости</a>
+          <a class="nav__link" href="donate.html">Донат</a>
+          <a class="nav__link" href="launcher.html">Лаунчер</a>
         </nav>
         <a class="brand" href="index.html" aria-label="LightWorld, на главную">
           <img class="brand__logo" src="images/logo.png" alt="" width="64" height="64">
           <span class="brand__name">LIGHT<span class="brand__accent">WORLD</span></span>
         </a>
         <div class="header__actions">
-          <a class="button button--accent" href="#start">Начать играть</a>
+          <a class="button button--accent" href="launcher.html">Начать играть</a>
         </div>
       </div>
     </header>
@@ -69,7 +70,7 @@
             </h1>
             <p class="hero__lead">Ванильное выживание с экономикой игроков, еженедельными ивентами и честным донатом. Сервер открыт для бета-теста, заходи одним из первых.</p>
             <div class="hero__actions">
-              <a class="button button--accent button--large" href="#start">Начать играть</a>
+              <a class="button button--accent button--large" href="launcher.html">Начать играть</a>
               <button class="ip-copy" type="button" id="ip-copy">play.lightworld.su <span class="ip-copy__hint">Копировать</span></button>
             </div>
             <ul class="hero__facts">
@@ -77,6 +78,7 @@
               <li class="hero__fact"><img src="images/icons/ender-eye.png" alt="" width="16" height="16">Свой лаунчер</li>
               <li class="hero__fact"><img src="images/icons/emerald.png" alt="" width="16" height="16">Играть бесплатно</li>
             </ul>
+            <a class="hero__more" href="#shop">Популярное в лавке ↓</a>
           </div>
         </div>
       </section>
@@ -133,6 +135,10 @@
         <p class="footer__author">Соколов Г. А., ЭФБО-12-25</p>
       </div>
     </footer>
+    <a class="cart-button" href="cart.html" aria-label="Корзина">
+      <i class="fa-solid fa-cart-shopping cart-button__icon" aria-hidden="true"></i>
+      <span class="cart-button__count" id="cart-count" hidden>0</span>
+    </a>
     <dialog class="modal" id="order-modal" aria-labelledby="order-title">
       <div class="modal__body">
         <div class="modal__head">
@@ -185,7 +191,7 @@
             <button class="button button--ghost" type="button" id="order-cancel">Отмена</button>
           </div>
         </form>
-        <p class="modal__success" id="order-success" hidden>Форма успешно отправлена!</p>
+        <p class="form-success" id="order-success" hidden>Форма успешно отправлена!</p>
       </div>
     </dialog>
   </body>

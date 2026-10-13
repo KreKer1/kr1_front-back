@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Донат — LightWorld</title>
+    <meta name="description" content="Лавка сервера LightWorld: проходки, наборы, люмены и косметика. Покупки не дают преимущества в игре.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="index.html">Главная</a>
+          <a class="nav__link" href="news.html">Новости</a>
+          <a class="nav__link nav__link--active" href="donate.html" aria-current="page">Донат</a>
+          <a class="nav__link" href="launcher.html">Лаунчер</a>
+        </nav>
+        <a class="brand" href="index.html" aria-label="LightWorld, на главную">
+          <img class="brand__logo" src="images/logo.png" alt="" width="64" height="64">
+          <span class="brand__name">LIGHT<span class="brand__accent">WORLD</span></span>
+        </a>
+        <div class="header__actions">
+          <a class="button button--accent" href="launcher.html">Начать играть</a>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__inner">
+        <div class="page__head">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item" aria-current="page">Донат</li>
+            </ol>
+          </nav>
+          <h1 class="page__title">Лавка</h1>
+          <p class="page__lead">Только косметика и удобства. Покупки поддерживают сервер и не дают преимущества в игре.</p>
+        </div>
+        <section class="catalog" aria-label="Товары">
+          <div class="products">
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <span class="product-card__badge">Хит</span>
+                <img class="product-card__icon" src="images/icons/trial-key.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Проходка «Навсегда»</h3>
+              <p class="product-card__text">Доступ ко всем режимам без срока действия.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">399 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="pass-forever" data-cart-name="Проходка «Навсегда»" data-cart-price="399">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Открывает все режимы сервера навсегда: выживание, анархию, мини-игры и креатив, когда они выйдут.</p>
+                <ul class="details__list">
+                  <li>Действует на всех будущих режимах</li>
+                  <li>Не даёт предметов и ресурсов</li>
+                  <li>Привязывается к нику</li>
+                </ul>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/ender-pearl.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Проходка «Сезон»</h3>
+              <p class="product-card__text">Доступ ко всем режимам до конца текущего сезона.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">149 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="pass-season" data-cart-name="Проходка «Сезон»" data-cart-price="149">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Доступ ко всем режимам до конца текущего сезона. Сезон длится около трёх месяцев, дата окончания есть в новостях.</p>
+                <ul class="details__list">
+                  <li>Дешёвый способ попробовать все режимы</li>
+                  <li>После конца сезона проходку можно продлить</li>
+                </ul>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <span class="product-card__badge">-53%</span>
+                <img class="product-card__icon" src="images/icons/bundle.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Набор «Новичок»</h3>
+              <p class="product-card__text">Инструменты, еда и кровать для первого дня.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">640 руб. <s class="product-card__old">1360</s></p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="kit-novice" data-cart-name="Набор «Новичок»" data-cart-price="640">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Всё, чтобы спокойно пережить первую ночь. Те же предметы можно добыть в игре, набор просто экономит время.</p>
+                <ul class="details__list">
+                  <li>Железные кирка, топор и лопата</li>
+                  <li>16 жареных стейков</li>
+                  <li>Кровать и 32 факела</li>
+                </ul>
+                <a class="details__link" href="product.html">Открыть страницу товара</a>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <span class="product-card__badge">Новое</span>
+                <img class="product-card__icon" src="images/icons/brick.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Набор «Строитель»</h3>
+              <p class="product-card__text">Блоки и декор для первого дома.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">990 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="kit-builder" data-cart-name="Набор «Строитель»" data-cart-price="990">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Стартовый запас блоков для первого дома: камень, доски, стекло и немного декора.</p>
+                <ul class="details__list">
+                  <li>128 блоков камня и 128 досок</li>
+                  <li>32 блока стекла</li>
+                  <li>Двери, люки и фонари</li>
+                </ul>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/glowstone-dust.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Люмены</h3>
+              <p class="product-card__text">Внутриигровая валюта для косметики.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">от 99 руб.</p>
+                <button class="button button--accent product-card__button" type="button">Выбрать</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Люмены — валюта для покупки косметики прямо в игре. Чем больше пакет, тем больше бонус.</p>
+                <ul class="details__packs">
+                  <li class="details__pack">
+                    <div>
+                      <span class="details__pack-name">Горсть</span>
+                      <span class="details__pack-amount">100 люменов</span>
+                    </div>
+                    <span class="details__pack-price">99 руб.</span>
+                    <button class="button button--accent details__button" type="button" data-cart-id="lumens-100" data-cart-name="Люмены: Горсть" data-cart-price="99">В корзину</button>
+                  </li>
+                  <li class="details__pack">
+                    <div>
+                      <span class="details__pack-name">Мешочек</span>
+                      <span class="details__pack-amount">300 люменов</span>
+                    </div>
+                    <span class="details__pack-price">279 руб.</span>
+                    <button class="button button--accent details__button" type="button" data-cart-id="lumens-300" data-cart-name="Люмены: Мешочек" data-cart-price="279">В корзину</button>
+                  </li>
+                  <li class="details__pack">
+                    <div>
+                      <span class="details__pack-name">Сундук</span>
+                      <span class="details__pack-amount">550 люменов</span> <span class="details__pack-bonus">+10%</span>
+                    </div>
+                    <span class="details__pack-price">499 руб.</span>
+                    <button class="button button--accent details__button" type="button" data-cart-id="lumens-550" data-cart-name="Люмены: Сундук" data-cart-price="499">В корзину</button>
+                  </li>
+                  <li class="details__pack">
+                    <div>
+                      <span class="details__pack-name">Хранилище</span>
+                      <span class="details__pack-amount">1200 люменов</span> <span class="details__pack-bonus">+20%</span>
+                    </div>
+                    <span class="details__pack-price">999 руб.</span>
+                    <button class="button button--accent details__button" type="button" data-cart-id="lumens-1200" data-cart-name="Люмены: Хранилище" data-cart-price="999">В корзину</button>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/firework-star.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Частицы «Звёздная пыль»</h3>
+              <p class="product-card__text">Мерцающий след за персонажем.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">249 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="particles" data-cart-name="Частицы «Звёздная пыль»" data-cart-price="249">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Мерцающий след из звёздочек за персонажем при ходьбе и полёте.</p>
+                <ul class="details__list">
+                  <li>Виден всем игрокам рядом</li>
+                  <li>Выключается командой /particles</li>
+                </ul>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/feather.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Перо LightWorld</h3>
+              <p class="product-card__text">Украшение на шляпу в цветах сервера.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">199 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="feather" data-cart-name="Перо LightWorld" data-cart-price="199">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Пиксельное перо на шляпе персонажа в бирюзовых цветах сервера.</p>
+                <ul class="details__list">
+                  <li>Отображается поверх любого скина</li>
+                  <li>Только украшение, без бонусов</li>
+                </ul>
+              </div>
+            </article>
+            <article class="product-card product-card--interactive" tabindex="0">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/elytra.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Плащ «Закат»</h3>
+              <p class="product-card__text">Плащ с тёплым градиентом и золотой каймой.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">299 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-cart-id="cape" data-cart-name="Плащ «Закат»" data-cart-price="299">В корзину</button>
+              </div>
+              <p class="product-card__hint" aria-hidden="true">Нажми, чтобы узнать больше</p>
+              <div class="details" hidden>
+                <p class="details__text">Плащ с тёплым закатным градиентом и золотой каймой.</p>
+                <ul class="details__list">
+                  <li>Виден, когда элитры сняты</li>
+                  <li>Только косметика, без бонусов</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2026 LightWorld.</p>
+        <p class="footer__author">Соколов Г. А., ЭФБО-12-25</p>
+      </div>
+    </footer>
+    <a class="cart-button" href="cart.html" aria-label="Корзина">
+      <i class="fa-solid fa-cart-shopping cart-button__icon" aria-hidden="true"></i>
+      <span class="cart-button__count" id="cart-count" hidden>0</span>
+    </a>
+    <dialog class="modal quick-view" id="quick-view" aria-labelledby="quick-view-title">
+      <div class="modal__body">
+        <div class="modal__head">
+          <div class="quick-view__head">
+            <img class="quick-view__icon" id="quick-view-icon" src="images/icons/paper.png" alt="" width="72" height="72">
+            <div>
+              <h2 class="modal__title" id="quick-view-title">Товар</h2>
+              <p class="quick-view__price" id="quick-view-price"></p>
+            </div>
+          </div>
+          <button class="modal__close" type="button" id="quick-view-close" aria-label="Закрыть окно">×</button>
+        </div>
+        <div class="quick-view__content" id="quick-view-content"></div>
+        <div class="quick-view__actions">
+          <button class="button button--accent" type="button" id="quick-view-cart" data-cart-id="" data-cart-name="" data-cart-price="0">В корзину</button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
