@@ -7,9 +7,12 @@ const orderSuccess = document.getElementById('order-success');
 const orderButtons = document.querySelectorAll('[data-product]');
 const closeButtons = [document.getElementById('order-close'), document.getElementById('order-cancel')];
 const ipButton = document.getElementById('ip-copy');
+const agreeCheckbox = document.getElementById('order-agree');
+const submitButton = document.getElementById('order-submit');
 
 function openOrder(productName) {
   orderForm.reset();
+  submitButton.disabled = true;
   orderForm.hidden = false;
   orderSuccess.hidden = true;
   orderError.textContent = '';
@@ -39,6 +42,10 @@ orderModal.addEventListener('click', function (event) {
   if (event.target === orderModal) {
     closeOrder();
   }
+});
+
+agreeCheckbox.addEventListener('change', function () {
+  submitButton.disabled = !agreeCheckbox.checked;
 });
 
 orderForm.addEventListener('input', function (event) {

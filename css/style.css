@@ -5,17 +5,18 @@
 }
 
 :root {
-  --color-bg: #f2f0eb;
-  --color-surface: #ffffff;
-  --color-soft: #e9e5dc;
-  --color-line: #ddd7cc;
-  --color-text: #1c1e1f;
-  --color-muted: #69665f;
-  --color-accent: #1f8579;
-  --color-accent-hover: #176a61;
-  --color-on-accent: #ffffff;
-  --color-danger: #b4412f;
-  --color-success: #2c8a57;
+  --color-bg: #161412;
+  --color-surface: #201d1a;
+  --color-soft: #2a2622;
+  --color-line: #3a342e;
+  --color-text: #ece7de;
+  --color-muted: #a59d91;
+  --color-accent: #3fb5a5;
+  --color-accent-hover: #5cc9ba;
+  --color-on-accent: #10201e;
+  --color-danger: #e0705c;
+  --color-success: #5ec98a;
+  --color-header: rgba(22, 20, 18, 0.88);
 
   --font-pixel: "Minecraft Rus", "Courier New", monospace;
   --font-body: "Calibri", "Carlito", "Segoe UI", sans-serif;
@@ -33,6 +34,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -66,11 +68,18 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(242, 240, 235, 0.9);
+  background-color: var(--color-header);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-line);
 }
@@ -151,7 +160,17 @@ a {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .button--accent {
@@ -159,7 +178,7 @@ a {
   color: var(--color-on-accent);
 }
 
-.button--accent:hover {
+.button--accent:hover:not(:disabled) {
   background-color: var(--color-accent-hover);
 }
 
@@ -169,7 +188,7 @@ a {
   border-color: var(--color-line);
 }
 
-.button--ghost:hover {
+.button--ghost:hover:not(:disabled) {
   border-color: var(--color-muted);
 }
 
@@ -523,6 +542,11 @@ a {
   color: var(--color-text);
   font-size: 22px;
   cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.modal__close:hover {
+  border-color: var(--color-muted);
 }
 
 .modal__product {
@@ -576,12 +600,12 @@ textarea.form__input {
 .form__input:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(31, 133, 121, 0.15);
+  box-shadow: 0 0 0 3px rgba(63, 181, 165, 0.25);
 }
 
 .form__input--invalid {
   border-color: var(--color-danger);
-  box-shadow: 0 0 0 3px rgba(180, 65, 47, 0.15);
+  box-shadow: 0 0 0 3px rgba(224, 112, 92, 0.2);
 }
 
 .form__check {
@@ -618,7 +642,7 @@ textarea.form__input {
 .modal__success {
   padding: 18px;
   border-radius: 12px;
-  background-color: rgba(44, 138, 87, 0.12);
+  background-color: rgba(94, 201, 138, 0.12);
   color: var(--color-success);
   font-family: var(--font-pixel);
   font-size: 20px;
