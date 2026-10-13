@@ -261,6 +261,96 @@ if (quickView) {
   });
 }
 
+const filtersForm = document.getElementById('filters');
+
+if (filtersForm) {
+  const catalogGrid = document.querySelector('.products--catalog');
+  const catalogCards = Array.from(catalogGrid.querySelectorAll('.product-card'));
+  const catalogEmpty = document.getElementById('catalog-empty');
+
+  function applyFilters() {
+    const query = filtersForm.elements.search.value.trim().toLowerCase();
+    const category = filtersForm.elements.category.value;
+    const sort = filtersForm.elements.sort.value;
+    let visibleCount = 0;
+
+    catalogCards.forEach(function (card) {
+      const title = card.querySelector('.product-card__title').textContent.toLowerCase();
+      const isMatch = (category === 'all' || card.dataset.category === category) && title.includes(query);
+      card.hidden = !isMatch;
+      if (isMatch) {
+        visibleCount += 1;
+      }
+    });
+
+    const sortedCards = catalogCards.slice();
+    if (sort === 'cheap') {
+      sortedCards.sort(function (a, b) {
+        return a.dataset.price - b.dataset.price;
+      });
+    } else if (sort === 'expensive') {
+      sortedCards.sort(function (a, b) {
+        return b.dataset.price - a.dataset.price;
+      });
+    }
+    sortedCards.forEach(function (card) {
+      catalogGrid.appendChild(card);
+    });
+
+    catalogEmpty.hidden = visibleCount > 0;
+  }
+
+  filtersForm.addEventListener('input', applyFilters);
+
+  filtersForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+  });
+
+  filtersForm.addEventListener('reset', function () {
+    setTimeout(applyFilters, 0);
+  });
+}
+
+const tagButtons = document.querySelectorAll('.tags__button');
+
+if (tagButtons.length > 0) {
+  const posts = document.querySelectorAll('.post');
+
+  tagButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const tag = button.dataset.tag;
+
+      tagButtons.forEach(function (item) {
+        const isActive = item === button;
+        item.classList.toggle('tags__button--active', isActive);
+        item.setAttribute('aria-pressed', isActive);
+      });
+
+      posts.forEach(function (post) {
+        post.hidden = tag !== 'all' && post.dataset.tag !== tag;
+      });
+    });
+  });
+}
+
+const revealItems = document.querySelectorAll('[data-reveal]');
+
+if (revealItems.length > 0 && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealItems.forEach(function (item) {
+    item.classList.add('reveal');
+    revealObserver.observe(item);
+  });
+}
+
 if (ipButton) {
   ipButton.addEventListener('click', function () {
     const hint = ipButton.querySelector('.ip-copy__hint');
