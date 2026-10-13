@@ -78,42 +78,69 @@
               <li class="hero__fact"><img src="images/icons/ender-eye.png" alt="" width="16" height="16">Свой лаунчер</li>
               <li class="hero__fact"><img src="images/icons/emerald.png" alt="" width="16" height="16">Играть бесплатно</li>
             </ul>
-            <a class="hero__more" href="#shop">Популярное в лавке ↓</a>
+            <a class="hero__more" href="#features">Что ждёт на сервере ↓</a>
           </div>
         </div>
       </section>
-      <section class="section" id="shop">
+      <section class="section" id="features">
         <div class="section__inner">
           <div class="section__head">
-            <p class="section__eyebrow">Лавка</p>
-            <h2 class="section__title">Популярное в лавке</h2>
-            <p class="section__text">Только косметика и удобства. Покупки поддерживают сервер и не дают преимущества в игре.</p>
+            <p class="section__eyebrow">Почему LightWorld</p>
+            <h2 class="section__title">Что ждёт тебя на сервере</h2>
           </div>
+          <div class="features">
+            <article class="feature" data-reveal>
+              <img class="feature__icon" src="images/icons/iron-pickaxe.png" alt="" width="64" height="64">
+              <h3 class="feature__title">Ванильное выживание</h3>
+              <p class="feature__text">Привычный Minecraft без плагинов, которые ломают баланс. Ресурсы добываются руками, стартовый набор у всех одинаковый.</p>
+              <span class="feature__tag">Без китов за донат</span>
+            </article>
+            <article class="feature" data-reveal>
+              <img class="feature__icon" src="images/icons/emerald.png" alt="" width="64" height="64">
+              <h3 class="feature__title">Экономика игроков</h3>
+              <p class="feature__text">Торговля идёт между игроками: магазины, рынок и аукцион. Цены задаёте вы, администрация ресурсы не печатает.</p>
+              <span class="feature__tag">Валюта — люмены</span>
+            </article>
+            <article class="feature" data-reveal>
+              <img class="feature__icon" src="images/icons/firework-rocket.png" alt="" width="64" height="64">
+              <h3 class="feature__title">Ивенты каждую неделю</h3>
+              <p class="feature__text">Конкурсы построек, турниры и праздники с наградами. Расписание публикуем заранее в новостях.</p>
+              <span class="feature__tag">По выходным</span>
+            </article>
+            <article class="feature" data-reveal>
+              <img class="feature__icon" src="images/icons/bell.png" alt="" width="64" height="64">
+              <h3 class="feature__title">Дружное сообщество</h3>
+              <p class="feature__text">Новичкам помогают наставники, общение идёт в Discord и в игре. Спам и токсичность модерируются.</p>
+              <span class="feature__tag">Discord и Telegram</span>
+            </article>
+            <article class="feature" data-reveal>
+              <img class="feature__icon" src="images/icons/iron-chestplate.png" alt="" width="64" height="64">
+              <h3 class="feature__title">Защита построек</h3>
+              <p class="feature__text">Регионы и логи блоков защищают постройки от гриферов. Если что-то сломали, восстановим по заявке.</p>
+              <span class="feature__tag">Откат по логам</span>
+            </article>
+            <article class="feature" data-reveal>
+              <img class="feature__icon" src="images/icons/writable-book.png" alt="" width="64" height="64">
+              <h3 class="feature__title">Поддержка рядом</h3>
+              <p class="feature__text">Модераторы отвечают в Discord и прямо в игре. Спор разбирает живой человек, а не бот.</p>
+              <span class="feature__tag">Ответ в течение дня</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section--alt" id="shop">
+        <div class="section__inner">
+          <div class="section__head">
+            <p class="section__eyebrow">Честный донат</p>
+            <h2 class="section__title">Донат не продаёт победу</h2>
+            <p class="section__text">Покупки поддерживают хостинг и разработку, но не дают преимущества в игре. Игрок без доната может всё то же, что и игрок с ним.</p>
+          </div>
+          <ul class="honest">
+            <li class="honest__item"><img class="honest__icon" src="images/icons/emerald.png" alt="" width="24" height="24">Только косметика: плащи, частицы и украшения</li>
+            <li class="honest__item"><img class="honest__icon" src="images/icons/trial-key.png" alt="" width="24" height="24">Проходки открывают режимы, но не дают ресурсов</li>
+            <li class="honest__item"><img class="honest__icon" src="images/icons/paper.png" alt="" width="24" height="24">Цены одинаковые для всех, без скрытых платежей</li>
+          </ul>
           <div class="products">
-            <article class="product-card">
-              <div class="product-card__art">
-                <span class="product-card__badge">Хит</span>
-                <img class="product-card__icon" src="images/icons/trial-key.png" alt="" width="64" height="64">
-              </div>
-              <h3 class="product-card__title">Проходка «Навсегда»</h3>
-              <p class="product-card__text">Доступ ко всем режимам без срока действия.</p>
-              <div class="product-card__footer">
-                <p class="product-card__price">399 руб.</p>
-                <button class="button button--accent product-card__button" type="button" data-product="Проходка «Навсегда»">Заказать</button>
-              </div>
-            </article>
-            <article class="product-card">
-              <div class="product-card__art">
-                <span class="product-card__badge">-53%</span>
-                <img class="product-card__icon" src="images/icons/bundle.png" alt="" width="64" height="64">
-              </div>
-              <h3 class="product-card__title">Набор «Новичок»</h3>
-              <p class="product-card__text">Инструменты, еда и кровать для первого дня.</p>
-              <div class="product-card__footer">
-                <p class="product-card__price">640 руб. <s class="product-card__old">1360</s></p>
-                <button class="button button--accent product-card__button" type="button" data-product="Набор «Новичок»">Заказать</button>
-              </div>
-            </article>
             <article class="product-card">
               <div class="product-card__art">
                 <img class="product-card__icon" src="images/icons/elytra.png" alt="" width="64" height="64">
@@ -125,6 +152,125 @@
                 <button class="button button--accent product-card__button" type="button" data-product="Плащ «Закат»">Заказать</button>
               </div>
             </article>
+            <article class="product-card">
+              <div class="product-card__art">
+                <span class="product-card__badge">Новое</span>
+                <img class="product-card__icon" src="images/icons/firework-star.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Частицы «Звёздная пыль»</h3>
+              <p class="product-card__text">Мерцающий след за персонажем.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">249 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-product="Частицы «Звёздная пыль»">Заказать</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__art">
+                <img class="product-card__icon" src="images/icons/feather.png" alt="" width="64" height="64">
+              </div>
+              <h3 class="product-card__title">Перо LightWorld</h3>
+              <p class="product-card__text">Украшение на шляпу в цветах сервера.</p>
+              <div class="product-card__footer">
+                <p class="product-card__price">199 руб.</p>
+                <button class="button button--accent product-card__button" type="button" data-product="Перо LightWorld">Заказать</button>
+              </div>
+            </article>
+          </div>
+          <a class="section__link" href="donate.html">Открыть всю лавку →</a>
+        </div>
+      </section>
+      <section class="section" id="modes">
+        <div class="section__inner">
+          <div class="section__head">
+            <p class="section__eyebrow">Режимы</p>
+            <h2 class="section__title">Один лаунчер, четыре мира</h2>
+          </div>
+          <div class="modes">
+            <article class="mode" data-reveal>
+              <div class="mode__top">
+                <img class="mode__icon" src="images/icons/diamond-pickaxe.png" alt="" width="48" height="48">
+                <span class="mode__status mode__status--open">Открыт</span>
+              </div>
+              <h3 class="mode__title">Выживание</h3>
+              <p class="mode__text">Основной режим: ванильное выживание с экономикой игроков и защитой построек.</p>
+              <p class="mode__note">128 игроков онлайн</p>
+            </article>
+            <article class="mode" data-reveal>
+              <div class="mode__top">
+                <img class="mode__icon" src="images/icons/tnt-minecart.png" alt="" width="48" height="48">
+                <span class="mode__status mode__status--soon">Скоро</span>
+              </div>
+              <h3 class="mode__title">Анархия</h3>
+              <p class="mode__text">Без правил и приватов. Отдельный мир и отдельный прогресс для тех, кто любит риск.</p>
+              <p class="mode__note">Закрытый тест зимой</p>
+            </article>
+            <article class="mode" data-reveal>
+              <div class="mode__top">
+                <img class="mode__icon" src="images/icons/bow.png" alt="" width="48" height="48">
+                <span class="mode__status mode__status--soon">Скоро</span>
+              </div>
+              <h3 class="mode__title">Мини-игры</h3>
+              <p class="mode__text">Короткие матчи на 5–15 минут, чтобы отдохнуть от выживания и поиграть с друзьями.</p>
+              <p class="mode__note">В разработке</p>
+            </article>
+            <article class="mode" data-reveal>
+              <div class="mode__top">
+                <img class="mode__icon" src="images/icons/painting.png" alt="" width="48" height="48">
+                <span class="mode__status mode__status--plan">В планах</span>
+              </div>
+              <h3 class="mode__title">Креатив</h3>
+              <p class="mode__text">Плоский мир и участки для строительства без ограничений по блокам и ресурсам.</p>
+              <p class="mode__note">После релиза</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section--alt" id="faq">
+        <div class="section__inner">
+          <div class="section__head section__head--center">
+            <p class="section__eyebrow">Вопросы</p>
+            <h2 class="section__title">Частые вопросы</h2>
+          </div>
+          <div class="faq">
+            <details class="faq__item">
+              <summary class="faq__question">Какая версия игры нужна?</summary>
+              <p class="faq__answer">Minecraft Java Edition 26.2. Лаунчер сам скачает нужную версию, ничего настраивать вручную не придётся.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Играть можно бесплатно?</summary>
+              <p class="faq__answer">Да. Все режимы доступны без вложений, а в лавке продаются только косметика и удобства.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Можно ли играть с модами?</summary>
+              <p class="faq__answer">Клиентские моды на оптимизацию и интерфейс разрешены. Читы и моды, которые дают преимущество, запрещены правилами.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Что будет с моими постройками?</summary>
+              <p class="faq__answer">Постройки защищены регионами от гриферов, а логи блоков позволяют откатить любые разрушения по заявке в поддержку.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Когда сервер выйдет из беты?</summary>
+              <p class="faq__answer">Когда соберём отзывы и закроем найденные ошибки. Дата релиза появится в новостях и в Discord.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Как связаться с администрацией?</summary>
+              <p class="faq__answer">Напиши в Discord в канал поддержки или модератору прямо в игре командой /report.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="join">
+        <div class="section__inner">
+          <div class="join" data-reveal>
+            <div class="join__body">
+              <h2 class="join__title">Присоединяйся к сообществу</h2>
+              <p class="join__text">Новости, голосования за обновления и поиск команды. Заходи, чтобы не пропустить старт релиза.</p>
+            </div>
+            <div class="join__actions">
+              <a class="social" href="#"><i class="fa-brands fa-discord social__icon" aria-hidden="true"></i>Discord</a>
+              <a class="social" href="#"><i class="fa-brands fa-telegram social__icon" aria-hidden="true"></i>Telegram</a>
+              <a class="button button--accent button--large" href="launcher.html">Начать играть</a>
+            </div>
           </div>
         </div>
       </section>

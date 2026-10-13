@@ -43,8 +43,15 @@
           <h1 class="page__title">Новости</h1>
           <p class="page__lead">Обновления, ивенты и изменения правил. Самые свежие записи сверху.</p>
         </div>
+        <div class="tags" role="group" aria-label="Тип новостей">
+          <button class="tags__button tags__button--active" type="button" data-tag="all" aria-pressed="true">Все</button>
+          <button class="tags__button" type="button" data-tag="update" aria-pressed="false">Обновления</button>
+          <button class="tags__button" type="button" data-tag="event" aria-pressed="false">Ивенты</button>
+          <button class="tags__button" type="button" data-tag="rules" aria-pressed="false">Правила</button>
+          <button class="tags__button" type="button" data-tag="announce" aria-pressed="false">Анонсы</button>
+        </div>
         <div class="news-list">
-          <article class="post" id="beta">
+          <article class="post" id="beta" data-tag="update">
             <img class="post__icon" src="images/icons/experience-bottle.png" alt="" width="64" height="64">
             <div class="post__body">
               <p class="post__meta"><time datetime="2026-10-10">10.10.2026</time> · Обновление</p>
@@ -53,7 +60,7 @@
               <p class="post__text">Заходи через лаунчер и пиши отзывы в Discord, в канале «бета-тест». От них зависит, что поменяется до релиза.</p>
             </div>
           </article>
-          <article class="post" id="build">
+          <article class="post" id="build" data-tag="event">
             <img class="post__icon" src="images/icons/firework-rocket.png" alt="" width="64" height="64">
             <div class="post__body">
               <p class="post__meta"><time datetime="2026-10-07">07.10.2026</time> · Ивент</p>
@@ -62,7 +69,7 @@
               <p class="post__text">Три лучшие постройки получат косметику из лавки и попадут в трейлер сервера. Остальным участникам — набор «Новичок» в подарок.</p>
             </div>
           </article>
-          <article class="post" id="rules">
+          <article class="post" id="rules" data-tag="rules">
             <img class="post__icon" src="images/icons/writable-book.png" alt="" width="64" height="64">
             <div class="post__body">
               <p class="post__meta"><time datetime="2026-10-02">02.10.2026</time> · Правила</p>
@@ -71,7 +78,7 @@
               <p class="post__text">Торговля через рынок стала обязательной для сделок дороже 64 люменов. Полный текст правил закреплён в Discord.</p>
             </div>
           </article>
-          <article class="post" id="anarchy">
+          <article class="post" id="anarchy" data-tag="announce">
             <img class="post__icon" src="images/icons/goat-horn.png" alt="" width="64" height="64">
             <div class="post__body">
               <p class="post__meta"><time datetime="2026-09-28">28.09.2026</time> · Анонс</p>
@@ -80,7 +87,7 @@
               <p class="post__text">Следи за новостями в Telegram: там первыми появятся даты закрытого теста.</p>
             </div>
           </article>
-          <article class="post" id="launcher">
+          <article class="post" id="launcher" data-tag="update">
             <img class="post__icon" src="images/icons/experience-bottle.png" alt="" width="64" height="64">
             <div class="post__body">
               <p class="post__meta"><time datetime="2026-09-20">20.09.2026</time> · Обновление</p>
@@ -89,7 +96,7 @@
               <p class="post__text">Пока только для Windows. Версии для macOS и Linux в работе.</p>
             </div>
           </article>
-          <article class="post" id="start">
+          <article class="post" id="start" data-tag="announce">
             <img class="post__icon" src="images/icons/goat-horn.png" alt="" width="64" height="64">
             <div class="post__body">
               <p class="post__meta"><time datetime="2026-09-12">12.09.2026</time> · Анонс</p>
