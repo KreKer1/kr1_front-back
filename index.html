@@ -74,9 +74,9 @@
               <button class="ip-copy" type="button" id="ip-copy">play.lightworld.su <span class="ip-copy__hint">Копировать</span></button>
             </div>
             <ul class="hero__facts">
-              <li class="hero__fact"><img src="images/icons/grass-block.png" alt="" width="16" height="16">Java 26.2</li>
-              <li class="hero__fact"><img src="images/icons/ender-eye.png" alt="" width="16" height="16">Свой лаунчер</li>
-              <li class="hero__fact"><img src="images/icons/emerald.png" alt="" width="16" height="16">Играть бесплатно</li>
+              <li class="hero__fact"><img class="hero__fact-icon" src="images/icons/grass-block.png" alt="" width="16" height="16">Java 26.2</li>
+              <li class="hero__fact"><img class="hero__fact-icon" src="images/icons/ender-eye.png" alt="" width="16" height="16">Свой лаунчер</li>
+              <li class="hero__fact"><img class="hero__fact-icon" src="images/icons/emerald.png" alt="" width="16" height="16">Играть бесплатно</li>
             </ul>
             <a class="hero__more" href="#features">Что ждёт на сервере ↓</a>
           </div>
@@ -291,7 +291,7 @@
           <h2 class="modal__title" id="order-title">Заявка на покупку</h2>
           <button class="modal__close" type="button" id="order-close" aria-label="Закрыть окно">×</button>
         </div>
-        <p class="modal__product">Товар: <span id="order-product-name">не выбран</span></p>
+        <p class="modal__product">Товар: <span class="modal__product-name" id="order-product-name">не выбран</span></p>
         <form class="form" id="order-form" action="#" method="post" novalidate>
           <input type="hidden" id="order-product" name="product">
           <div class="form__field">
@@ -325,10 +325,10 @@
           </div>
           <div class="form__field form__field--wide">
             <label class="form__label" for="order-comment">Комментарий</label>
-            <textarea class="form__input" id="order-comment" name="comment" rows="3" placeholder="Например, подарок другу Alex_99"></textarea>
+            <textarea class="form__input form__input--textarea"" id="order-comment" name="comment" rows="3" placeholder="Например, подарок другу Alex_99"></textarea>
           </div>
           <label class="form__check" for="order-agree">
-            <input id="order-agree" name="agree" type="checkbox" required>
+            <input class="form__checkbox" id="order-agree" name="agree" type="checkbox" required>
             <span>Согласен на обработку персональных данных и с правилами сервера</span>
           </label>
           <p class="form__error" id="order-error" aria-live="polite"></p>
