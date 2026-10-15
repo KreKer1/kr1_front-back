@@ -363,7 +363,7 @@ input[type="checkbox"]:focus-visible {
   gap: 8px;
 }
 
-.hero__fact img {
+.hero__fact-icon {
   image-rendering: pixelated;
 }
 
@@ -560,7 +560,7 @@ input[type="checkbox"]:focus-visible {
   color: var(--color-muted);
 }
 
-.modal__product span {
+.modal__product-name {
   color: var(--color-text);
   font-weight: 700;
 }
@@ -599,7 +599,7 @@ input[type="checkbox"]:focus-visible {
   font-size: 17px;
 }
 
-textarea.form__input {
+.form__input--textarea {
   padding: 10px 14px;
   resize: vertical;
 }
@@ -624,7 +624,7 @@ textarea.form__input {
   cursor: pointer;
 }
 
-.form__check input {
+.form__checkbox {
   width: 18px;
   height: 18px;
   margin-top: 3px;
@@ -892,11 +892,11 @@ textarea.form__input {
   padding-left: 22px;
 }
 
-.product__list li + li {
+.product__item + .product__item {
   margin-top: 6px;
 }
 
-.product__list li::marker {
+..product__item::marker {
   color: var(--color-accent);
 }
 
@@ -1117,11 +1117,11 @@ textarea.form__input {
   padding-left: 22px;
 }
 
-.details__list li + li {
+.details__item + .details__item {
   margin-top: 4px;
 }
 
-.details__list li::marker {
+	.details__item::marker {
   color: var(--color-accent);
 }
 
@@ -1679,7 +1679,7 @@ textarea.form__input {
   cursor: pointer;
 }
 
-.filters__option input {
+.filters__radio {
   width: 16px;
   height: 16px;
   margin: 0;
